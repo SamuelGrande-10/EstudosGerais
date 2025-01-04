@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        caption{
+            border: 1px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: darkgrey;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead{
+            background-color: blue;
+            color:white;
+        }
+
+        td.num{
+            text-align: right;
+        }
+        
+        tfoot{
+            background-color: brown;
+            color: white;
+        }
+
+        .total{
+            background-color: brown;
+            color: white;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+
+    <!--
+    ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        CAPTION = Legenda da Tabela
+        THEAD
+            tr, td, th
+        TBODY
+             tr, td, th
+        TFOOT
+             tr, td, th
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+      
+        <thead>
+            <tr>
+               <th scope="col">Estado</th>
+               <th scope="col" style="width: 50px;">População</th> 
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">78 975 256</td>
+            </tr>
+
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">32 654 125</td>
+            </tr>
+
+            <tr>
+                <td>Brasilia</td>
+                <td class="num">98 752 642</td>
+            </tr>
+
+            <tr>
+                <td>Parana</td>
+                <td class="num">88 654 321</td>
+            </tr>
+
+            <tr>
+                <td>Amapa</td>
+                <td>22 365 985</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <th scope="row">Total de habitantes</th>
+            <td class="total">10 584 693</td>
+
+        </tfoot>
+
+    </table>
+    
+</body>
+</html>
